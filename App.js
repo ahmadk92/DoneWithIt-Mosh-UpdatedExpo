@@ -1,13 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
-  
-  console.log("App executed!");
-  
+  const handlePress = () => console.log("Text is pressed.");
+
   return (
     <View style={styles.container}>
-      <Text>Hello React Native!</Text>
+      <Text numberOfLines={1} onPress={() => console.log("Text preesed!")}>
+        Hello React Native! this is a long text, even longer and longer, and I'm
+        not sure the end of this text will be at the same line or not!
+      </Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,8 +18,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
