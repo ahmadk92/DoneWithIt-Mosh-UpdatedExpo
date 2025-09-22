@@ -6,26 +6,18 @@ import {
   View,
   TouchableWithoutFeedback,
   TouchableOpacity,
-  TouchableHighlight
+  TouchableHighlight,
+  Button
 
 } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
+  const handlePress = ()=> console.log("Button preesd");
+  
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello React Native!</Text>
-      <TouchableHighlight onPress={()=> console.log("Image Preesed")}>
-        <Image
-          blurRadius={5}
-          fadeDuration={5000}
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/200/300",
-          }}
-        />
-      </TouchableHighlight >
+      <Button title="click me" onPress={handlePress} color="orange" />
     </SafeAreaView>
   );
 }
