@@ -3,7 +3,7 @@
     "name": "DoneWithIt",
     "slug": "DoneWithIt",
     "version": "1.0.0",
-    "orientation": "default", // choose between portrait, landscape or default(means both of them)
+    "orientation": "portrait", // choose between portrait, landscape or default(means both of them)
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
