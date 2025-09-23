@@ -10,14 +10,21 @@ import {
   Alert,
   Platform,
   StatusBar,
-  Dimensions
+  Dimensions,
+  useWindowDimensions
 } from "react-native";
+
+
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
   const handlePress = () => console.log("Button preesd");
-  console.log(Dimensions.get('screen'));
-  console.log(Dimensions.get('window'));
+
+  const {width, height} = useWindowDimensions();
+  const isLandscape = width > height;
+  console.log("width:",width,"height:",{height});
+  console.log(`isLandscape: ${isLandscape}`)
+  
   
   return (
     <SafeAreaView style={styles.container}>
