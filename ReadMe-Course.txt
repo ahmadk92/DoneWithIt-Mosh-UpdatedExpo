@@ -5,3 +5,8 @@ For detecting device orientaition, we shoud install a library from react communi
 now the react native itself is evolved and no need to use community library
 just use
 import { useWindowDimensions } from "react-native";
+
+
+code snips for react native:
+rsf : creating a react native stateless function
+rnss: creating a react native style sheet
