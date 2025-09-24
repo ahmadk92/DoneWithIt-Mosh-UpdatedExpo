@@ -12,3 +12,4 @@ rsf : creating a react native stateless function
 rnss: creating a react native style sheet
 
 
+Ios have Shadows API with more contrall than android
