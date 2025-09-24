@@ -10,3 +10,5 @@ import { useWindowDimensions } from "react-native";
 code snips for react native:
 rsf : creating a react native stateless function
 rnss: creating a react native style sheet
+
+

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Image, ImageBackground, StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import colors from "../config/colors";
 
 function WelcomeScreen(props) {
   return (
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   loginButton: {
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
     width: "100%",
     height: 70,
   },
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   registerButton: {
-    backgroundColor: "#4ecdc4",
+    backgroundColor: colors.secondary,
     width: "100%",
     height: 70,
   },
