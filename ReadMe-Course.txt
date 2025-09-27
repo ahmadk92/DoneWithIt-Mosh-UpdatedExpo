@@ -13,3 +13,15 @@ rnss: creating a react native style sheet
 
 
 Ios have Shadows API with more contrall than android
+
+
+with installing this, we have access to some info about device
+    npx expo install expo-constants
+    import constans from 'expo-constants'
+
+We are going to use a library to handle gestures
+    npx expo install react-native-gesture-handler
+    you can look to this link for docs of swipeable component
+        https://docs.swmansion.com/react-native-gesture-handler/docs/components/swipeable
+        the above is no future proof, but the reanimated swipeable at below link is the new way:
+        https://docs.swmansion.com/react-native-gesture-handler/docs/components/reanimated_swipeable
