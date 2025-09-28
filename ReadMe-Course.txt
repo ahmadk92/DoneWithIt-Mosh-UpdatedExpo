@@ -25,3 +25,5 @@ We are going to use a library to handle gestures
         https://docs.swmansion.com/react-native-gesture-handler/docs/components/swipeable
         the above is no future proof, but the reanimated swipeable at below link is the new way:
         https://docs.swmansion.com/react-native-gesture-handler/docs/components/reanimated_swipeable
+
+"ItemSeparatorComponent", look at this naming, all capitalized; it means you need to give this a function component

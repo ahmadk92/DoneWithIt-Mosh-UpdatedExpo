@@ -2,6 +2,7 @@ import React from "react";
 import { FlatList, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import ListItem from "../components/ListItem";
+import ListItemSeparator from "../components/ListItemSeparator";
 
 const messages = [
   {
@@ -32,10 +33,12 @@ function MessagesScreen(props) {
             />
           )}
           keyExtractor={(item) => item.id}
+          ItemSeparatorComponent={ListItemSeparator}
         />
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
+
 
 export default MessagesScreen;
