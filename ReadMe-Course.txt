@@ -27,3 +27,5 @@ We are going to use a library to handle gestures
         https://docs.swmansion.com/react-native-gesture-handler/docs/components/reanimated_swipeable
 
 "ItemSeparatorComponent", look at this naming, all capitalized; it means you need to give this a function component
+
+In this commit, I do the old way using swipeable, althow there is a diffrent from mosh code, u muse wrap the swipeable component inside a GestureHandlerRootView

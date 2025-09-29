@@ -3,6 +3,7 @@ import { FlatList, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import ListItem from "../components/ListItem";
 import ListItemSeparator from "../components/ListItemSeparator";
+import ListItemDeleteAction from "../components/ListItemDeleteAction";
 
 const messages = [
   {
@@ -31,6 +32,7 @@ function MessagesScreen(props) {
               subtitle={item.description}
               image={item.image}
               onPress={() => console.log("message selected", item)}
+              renderRightActions={ListItemDeleteAction}
             />
           )}
           keyExtractor={(item) => item.id}
