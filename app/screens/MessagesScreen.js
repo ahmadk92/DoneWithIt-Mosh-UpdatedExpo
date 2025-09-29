@@ -30,6 +30,7 @@ function MessagesScreen(props) {
               title={item.title}
               subtitle={item.description}
               image={item.image}
+              onPress={() => console.log("message selected", item)}
             />
           )}
           keyExtractor={(item) => item.id}
@@ -39,6 +40,5 @@ function MessagesScreen(props) {
     </SafeAreaProvider>
   );
 }
-
 
 export default MessagesScreen;
