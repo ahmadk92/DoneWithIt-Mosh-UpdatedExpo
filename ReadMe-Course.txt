@@ -29,3 +29,20 @@ We are going to use a library to handle gestures
 "ItemSeparatorComponent", look at this naming, all capitalized; it means you need to give this a function component
 
 In this commit, I do the old way using swipeable, althow there is a diffrent from mosh code, u muse wrap the swipeable component inside a GestureHandlerRootView
+
+Now we want to use the modern way of ReanimatedSwipeable, instead of deprecated Swipeable component
+    enable Reanimated in your babel.config.js if it isn’t already:
+        module.exports = function (api) {
+            api.cache(true);
+            return {
+        presets: ["babel-preset-expo"],
+        plugins: ["react-native-reanimated/plugin"],
+        };
+        };
+Whenever you add or edit Babel config, you must clear the Metro cache so the plugin loads properly:
+    npx expo start -c
+
+If you recieve error about babel-preset-expo then reinstall babel-preset-expo
+    Run this in your terminal:  
+    npm install babel-preset-expo --save-dev
+We still going to keep with old version of Swipeable component to follow mosh course properly
