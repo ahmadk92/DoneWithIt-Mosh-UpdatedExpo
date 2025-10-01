@@ -46,3 +46,5 @@ If you recieve error about babel-preset-expo then reinstall babel-preset-expo
     Run this in your terminal:  
     npm install babel-preset-expo --save-dev
 We still going to keep with old version of Swipeable component to follow mosh course properly
+
+Mosh’s example (recorded on iOS simulator) shows the list physically bouncing down — Android simply doesn’t do that by default.
