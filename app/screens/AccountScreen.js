@@ -6,18 +6,18 @@ import ListItem from "../components/ListItem";
 import Icon from "../components/Icon";
 import colors from "../config/colors";
 import ListItemSeparator from "../components/ListItemSeparator";
+const menuItems = [
+  {
+    title: "My Listings",
+    icon: { name: "format-list-bulleted", backgroundColor: colors.primary },
+  },
+  {
+    title: "My Messages",
+    icon: { name: "email", backgroundColor: colors.secondary },
+  },
+];
 
 function AccountScreen(props) {
-  const menuItems = [
-    {
-      title: "My Listings",
-      icon: { name: "format-list-bulleted", backgroundColor: colors.primary },
-    },
-    {
-      title: "My Messages",
-      icon: { name: "email", backgroundColor: colors.secondary },
-    },
-  ];
   return (
     <Screen style={styles.screen}>
       <View style={styles.profileRow}>
@@ -58,9 +58,8 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   profileRow: {
-    width:"100%",
-    height:"15%",
-
+    width: "100%",
+    height: "15%",
   },
   screen: {
     backgroundColor: colors.light,

@@ -48,3 +48,5 @@ If you recieve error about babel-preset-expo then reinstall babel-preset-expo
 We still going to keep with old version of Swipeable component to follow mosh course properly
 
 Mosh’s example (recorded on iOS simulator) shows the list physically bouncing down — Android simply doesn’t do that by default.
+
+Mosh had issue with for applying padding to the Screen component for rendering ListingScreen.js, the problem was for past at the time of mosh recording course, but now there is no issue and works fine, no need extra work
