@@ -50,3 +50,7 @@ We still going to keep with old version of Swipeable component to follow mosh co
 Mosh’s example (recorded on iOS simulator) shows the list physically bouncing down — Android simply doesn’t do that by default.
 
 Mosh had issue with for applying padding to the Screen component for rendering ListingScreen.js, the problem was for past at the time of mosh recording course, but now there is no issue and works fine, no need extra work
+
+note: import defaultStyles from "../config/styles" is equivalent to: import anyNameYouWant from "../config/styles"; You could literally write: import banana from "../config/styles";
+        You are importing the default export (the object) from that file.
+        You can name it anything you want — the name defaultStyles is just a local variable name chosen by Mosh.
