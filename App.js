@@ -1,7 +1,12 @@
 import React from "react";
-import AccountScreen from "./app/screens/AccountScreen";
-import ListingScreen from "./app/screens/ListingScreen";
+
+import AppTextInput from "./app/components/AppTextInput";
+import Screen from "./app/components/Screen";
 
 export default function App() {
-  return <ListingScreen />;
+  return (
+    <Screen>
+      <AppTextInput icon={"email"} placeholder="Username" />
+    </Screen>
+  );
 }
