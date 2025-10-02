@@ -8,9 +8,17 @@ function AppTextInput({ icon, ...otherProbs }) {
   return (
     <View style={styles.container}>
       {icon && (
-        <MaterialCommunityIcons name={icon} size={20} style={styles.icon} />
+        <MaterialCommunityIcons
+          name={icon}
+          size={20}
+          color={defaultStyles.colors.medium}
+          style={styles.icon}
+        />
       )}
-      <TextInput style={defaultStyles.text} {...otherProbs} />
+      <TextInput
+        style={[defaultStyles.text, styles.textInput]}
+        {...otherProbs}
+      />
     </View>
   );
 }
@@ -26,8 +34,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   icon: {
-    color: defaultStyles.colors.medium,
     marginRight: 10,
+  },
+  textInput: {
+    flex: 1, // this makes the TextInput fill space properly
   },
 });
 export default AppTextInput;

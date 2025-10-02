@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-native-community/hooks": "^100.1.0",
-    "expo": "~54.0.9",
+    "expo": "54.0.12",
     "expo-constants": "~18.0.9",
     "expo-status-bar": "~3.0.8",
     "react": "19.1.0",
