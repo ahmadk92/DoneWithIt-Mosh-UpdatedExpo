@@ -54,3 +54,7 @@ Mosh had issue with for applying padding to the Screen component for rendering L
 note: import defaultStyles from "../config/styles" is equivalent to: import anyNameYouWant from "../config/styles"; You could literally write: import banana from "../config/styles";
         You are importing the default export (the object) from that file.
         You can name it anything you want — the name defaultStyles is just a local variable name chosen by Mosh.
+
+@react-native-picker/picker:
+    In mosh video time recording, was not available, but now it can be:
+    npx expo install @react-native-picker/picker
