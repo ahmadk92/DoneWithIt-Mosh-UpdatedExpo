@@ -61,3 +61,6 @@ note: import defaultStyles from "../config/styles" is equivalent to: import anyN
 
 Formik to build forms easily:
     npm install formik --save
+
+Yup is a library for handling validation:
+    npm i yup
