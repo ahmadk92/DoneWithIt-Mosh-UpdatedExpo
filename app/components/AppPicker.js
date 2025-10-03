@@ -4,7 +4,6 @@ import {
   FlatList,
   Modal,
   StyleSheet,
-  TextInput,
   TouchableWithoutFeedback,
   View,
 } from "react-native";
@@ -17,9 +16,9 @@ import PickerItem from "./PickerItem";
 function AppPicker({
   icon,
   items,
-  selectedCategory,
+  selectedItem,
   placeholder,
-  onSelectCategory,
+  onSelectItem,
 }) {
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -31,7 +30,7 @@ function AppPicker({
             <MaterialCommunityIcons name={icon} size={20} style={styles.icon} />
           )}
           <AppText style={styles.text}>
-            {selectedCategory ? selectedCategory.label : placeholder}
+            {selectedItem ? selectedItem.label : placeholder}
           </AppText>
           <MaterialCommunityIcons name="chevron-down" size={20} />
         </View>
@@ -46,7 +45,7 @@ function AppPicker({
               label={item.label}
               onPress={() => {
                 setModalVisible(false);
-                onSelectCategory(item);
+                onSelectItem(item);
               }}
             />
           )}
