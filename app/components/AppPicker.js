@@ -13,13 +13,7 @@ import defaultStyles from "../config/styles";
 import AppText from "./AppText";
 import PickerItem from "./PickerItem";
 
-function AppPicker({
-  icon,
-  items,
-  selectedItem,
-  placeholder,
-  onSelectItem,
-}) {
+function AppPicker({ icon, items, selectedItem, placeholder, onSelectItem }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -29,9 +23,13 @@ function AppPicker({
           {icon && (
             <MaterialCommunityIcons name={icon} size={20} style={styles.icon} />
           )}
-          <AppText style={styles.text}>
-            {selectedItem ? selectedItem.label : placeholder}
-          </AppText>
+
+          {selectedItem ? (
+            <AppText style={styles.text}>{selectedItem.label}</AppText>
+          ) : (
+            <AppText style={styles.placeholder}>{placeholder}</AppText>
+          )}
+
           <MaterialCommunityIcons name="chevron-down" size={20} />
         </View>
       </TouchableWithoutFeedback>
@@ -68,6 +66,9 @@ const styles = StyleSheet.create({
   icon: {
     color: defaultStyles.colors.medium,
     marginRight: 10,
+  },
+  placeholder: {
+     color: defaultStyles.colors.medium 
   },
   text: {
     flex: 1,
