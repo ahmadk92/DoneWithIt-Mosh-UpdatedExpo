@@ -42,11 +42,13 @@ function ListingEditScreen(props) {
           placeholder="Price"
           maxLength={8} //10000.99 $
           keyBoardType="numeric"
+          width={120}
         />
         <Picker
           items={categories}
           name="category"
           placeholder="Category"
+          width="50%"
         />
         <AppFormField
           name="description"
