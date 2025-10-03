@@ -1,12 +1,12 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 function Screen({ children, style }) {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={[styles.screen, style]} edges={["top"]}>
-        {children}
+      <SafeAreaView style={[styles.screen, style]}>
+        <View style={[styles.view, style]}>{children}</View>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -15,6 +15,9 @@ function Screen({ children, style }) {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
+  },
+  view: {
+    flex:1,
   },
 });
 export default Screen;

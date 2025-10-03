@@ -4,6 +4,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import ListItem from "../components/ListItem";
 import ListItemSeparator from "../components/ListItemSeparator";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import Screen from "../components/Screen";
 
 const initialMessages = [
   {
@@ -30,8 +31,7 @@ function MessagesScreen(props) {
   };
 
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
+    <Screen >
         <FlatList
           data={messages}
           renderItem={({ item }) => (
@@ -61,8 +61,7 @@ function MessagesScreen(props) {
             ]);
           }}
         />
-      </SafeAreaView>
-    </SafeAreaProvider>
+    </Screen>
   );
 }
 
