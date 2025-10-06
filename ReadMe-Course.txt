@@ -64,3 +64,15 @@ Formik to build forms easily:
 
 Yup is a library for handling validation:
     npm i yup
+
+____________________
+for image picker can use third party lib or expo itself, with expo is easier with less effort
+    npx expo install expo-image-picker
+    import * as ImagePicker from 'expo-image-picker';
+
+Note about API changing
+    requestCameraPermissionsAsync() → asks for permission to use the device camera. (still exist, no change)
+
+    requestCameraRollPermissionsAsync() → asked for permission to access the photo library / gallery.
+        this one is renamed to:
+        ImagePicker.requestMediaLibraryPermissionsAsync() (only worked on real mobile, the emulator automatically give access and don't show pop up)
