@@ -76,3 +76,18 @@ Note about API changing
     requestCameraRollPermissionsAsync() → asked for permission to access the photo library / gallery.
         this one is renamed to:
         ImagePicker.requestMediaLibraryPermissionsAsync() (only worked on real mobile, the emulator automatically give access and don't show pop up)
+
+As of Expo SDK 41+, expo-permissions has been deprecated and replaced by specific permission methods inside each individual package (like expo-image-picker, expo-location, etc.).
+    so don't expo install expo-permissions , use import * as ImagePicker from "expo-image-picker";
+
+Starting from Expo SDK 41, the ImagePicker API was redesigned to match the native Android & iOS media
+    const result = await ImagePicker.launchImageLibraryAsync();
+    the result is now changed to:
+        {
+            canceled: false,
+            assets: [
+                 { uri: "file:///photo1.jpg" },
+                 { uri: "file:///photo2.jpg" },
+                 { uri: "file:///photo3.jpg" }
+              ]
+        }
