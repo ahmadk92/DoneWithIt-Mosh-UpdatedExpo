@@ -94,3 +94,7 @@ Starting from Expo SDK 41, the ImagePicker API was redesigned to match the nativ
 scrollToEnd:
     If this is a vertical ScrollView scrolls to the bottom. If this is a horizontal ScrollView scrolls to the right.
     Use scrollToEnd({animated: true}) for smooth animated scrolling, scrollToEnd({animated: false}) for immediate scrolling. If no options are passed, animated defaults to true.
+
+npx expo install expo-location
+    Location.requestPermissionsAsync() is now deprecated, use:
+        Location.requestForegroundPermissionsAsync()
