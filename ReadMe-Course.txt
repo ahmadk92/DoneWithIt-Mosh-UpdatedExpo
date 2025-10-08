@@ -98,3 +98,13 @@ scrollToEnd:
 npx expo install expo-location
     Location.requestPermissionsAsync() is now deprecated, use:
         Location.requestForegroundPermissionsAsync()
+
+Navigation:
+        Installation
+            npm install @react-navigation/native
+            npx expo install react-native-screens react-native-safe-area-context
+    
+        Navigator types:
+            Stack Navigator : from one page to another page ; install with: npm install @react-navigation/native-stack
+            Tab Navigator: switch between tabs
+            Drawer Navigator: navigate with a draw effect or gesture
