@@ -114,3 +114,9 @@ navigation object all methods:(mosh said navigation prop)
 
 tabBarOptions={{ ... }} ❌ was removed.
     use screenOptions={{ ... }}
+
+the mode prop has been removed and replaced by a new API.Now, you define the presentation style inside screenOptions:
+    screenOptions={{
+    presentation: "modal", // 👈 this replaces mode="modal"
+  }}
+        
