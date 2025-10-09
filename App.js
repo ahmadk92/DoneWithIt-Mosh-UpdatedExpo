@@ -5,34 +5,23 @@ import { NavigationContainer, useNavigation } from "@react-navigation/native";
 
 import Screen from "./app/components/Screen";
 
-const Link = () => {
-  const navigation = useNavigation(); // must use the useNavigation hook to have access navigation object, because Link is not in Stack.Screen
-  return (
-    <View style={{marginTop:20}}>
-      <Button
-        title="click"
-        onPress={() => navigation.navigate("TweetsDetails")}
-      />
-    </View>
-  );
-};
+
 
 const Tweets = (
-  { navigation } // have access to navigation object, because Tweets component is in Stack.Screen
+  { navigation } 
 ) => (
   <Screen>
     <Text>Tweets</Text>
     <Button
       title="Tweets Detail"
-      onPress={() => navigation.navigate("TweetsDetails")}
+      onPress={() => navigation.navigate("TweetsDetails", {id:1})}
     />
-    <Link />
   </Screen>
 );
 
-const TweetsDetails = () => (
+const TweetsDetails = ({route}) => (
   <Screen>
-    <Text>TweetsDetails</Text>
+    <Text>TweetsDetails {route.params.id}</Text>
   </Screen>
 );
 
