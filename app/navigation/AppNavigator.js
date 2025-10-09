@@ -1,20 +1,48 @@
-import React from 'react';
+import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import AccountScreen from "../screens/AccountScreen";
-import ListingScreen from "../screens/ListingScreen";
 import ListingEditScreen from "../screens/ListingEditScreen";
-import FeedNavigator from './FeedNavigator';
-
+import FeedNavigator from "./FeedNavigator";
+import AccountNavigator from "./AccountNavigator";
+import NewListingButton from "./NewListingButton";
 
 const Tab = createBottomTabNavigator();
 const AppNavigator = () => (
-    <Tab.Navigator screenOptions={{headerShown:false}}>
-        <Tab.Screen name = "Feed" component={FeedNavigator}/>
-        <Tab.Screen name = "ListingEdit" component={ListingEditScreen}/>
-        <Tab.Screen name = "Account" component={AccountScreen}/>
-    </Tab.Navigator>
+  <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Screen
+      name="Feed"
+      component={FeedNavigator}
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <MaterialCommunityIcons name="home" size={size} color={color} />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="ListingEdit"
+      component={ListingEditScreen}
+      options={({navigation}) => ({
+        tabBarButton: (props) => <NewListingButton {...props} onPress={()=>navigation.navigate("ListingEdit")}/>,
+        tabBarIcon: ({ size, color }) => (// mosh kept this code, but you can safely remove and it's unnecessary
+          <MaterialCommunityIcons
+            name="plus-circle"
+            size={size}
+            color={color}
+          />
+        ),
+      })}
+    />
+    <Tab.Screen
+      name="Account"
+      component={AccountNavigator}
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <MaterialCommunityIcons name="account" size={size} color={color} />
+        ),
+      }}
+    />
+  </Tab.Navigator>
 );
-
 
 export default AppNavigator;
