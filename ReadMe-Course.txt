@@ -106,8 +106,9 @@ Navigation:
     
         Navigator types:
             Stack Navigator : from one page to another page ; install with: npm install @react-navigation/native-stack
-            Tab Navigator: switch between tabs
+            Tab Navigator: switch between tabs; install with :npm install @react-navigation/bottom-tabs
             Drawer Navigator: navigate with a draw effect or gesture
 
 navigation object all methods:(mosh said navigation prop)
     https://reactnavigation.org/docs/navigation-object
+
