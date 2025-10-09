@@ -1,13 +1,32 @@
 import React from "react";
-import { Text } from "react-native";
+import { Button, Text, View } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
 
 import Screen from "./app/components/Screen";
 
-const Tweets = () => (
+const Link = () => {
+  const navigation = useNavigation(); // must use the useNavigation hook to have access navigation object, because Link is not in Stack.Screen
+  return (
+    <View style={{marginTop:20}}>
+      <Button
+        title="click"
+        onPress={() => navigation.navigate("TweetsDetails")}
+      />
+    </View>
+  );
+};
+
+const Tweets = (
+  { navigation } // have access to navigation object, because Tweets component is in Stack.Screen
+) => (
   <Screen>
     <Text>Tweets</Text>
+    <Button
+      title="Tweets Detail"
+      onPress={() => navigation.navigate("TweetsDetails")}
+    />
+    <Link />
   </Screen>
 );
 
