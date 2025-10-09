@@ -112,3 +112,5 @@ Navigation:
 navigation object all methods:(mosh said navigation prop)
     https://reactnavigation.org/docs/navigation-object
 
+tabBarOptions={{ ... }} ❌ was removed.
+    use screenOptions={{ ... }}
