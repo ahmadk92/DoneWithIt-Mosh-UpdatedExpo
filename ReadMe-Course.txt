@@ -119,4 +119,10 @@ the mode prop has been removed and replaced by a new API.Now, you define the pre
     screenOptions={{
     presentation: "modal", // 👈 this replaces mode="modal"
   }}
-        
+
+
+Netwroking section:
+    setting-up-the-backend: to do so, just run npm install in backend folder project and change the ip to your machine, don't worry about error or warnings, their just because the depencendy are outdated, which is not important to use
+
+calling-apis-using-apisauce:
+    install with: npx expo install apisauce or npm install apisauce
