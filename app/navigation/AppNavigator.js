@@ -6,6 +6,7 @@ import ListingEditScreen from "../screens/ListingEditScreen";
 import FeedNavigator from "./FeedNavigator";
 import AccountNavigator from "./AccountNavigator";
 import NewListingButton from "./NewListingButton";
+import routes from "./routes";
 
 const Tab = createBottomTabNavigator();
 const AppNavigator = () => (
@@ -23,7 +24,7 @@ const AppNavigator = () => (
       name="ListingEdit"
       component={ListingEditScreen}
       options={({navigation}) => ({
-        tabBarButton: (props) => <NewListingButton {...props} onPress={()=>navigation.navigate("ListingEdit")}/>,
+        tabBarButton: (props) => <NewListingButton {...props} onPress={()=>navigation.navigate(routes.LISTING_EDIT)}/>,
         tabBarIcon: ({ size, color }) => (// mosh kept this code, but you can safely remove and it's unnecessary
           <MaterialCommunityIcons
             name="plus-circle"

@@ -5,6 +5,7 @@ import Screen from "../components/Screen";
 import Card from "../components/Card";
 import ListItemSeparator from "../components/ListItemSeparator";
 import colors from "../config/colors";
+import routes from "../navigation/routes";
 
 const listings = [
   {
@@ -33,7 +34,7 @@ function ListingScreen({navigation}) {
             title={item.title}
             subtitle={"$" + item.price}
             image={item.image}
-            onPress={() => navigation.navigate("ListingDetails", item)}
+            onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
           />
         )}
       />
