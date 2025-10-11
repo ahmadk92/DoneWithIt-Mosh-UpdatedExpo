@@ -126,3 +126,4 @@ Netwroking section:
 
 calling-apis-using-apisauce:
     install with: npx expo install apisauce or npm install apisauce
+    In mosh video, he didn't set the  timeout:2000, for apiClient, you must set because the default timeout now is different from time mosh recorded his course. apisauce default timeout is about 60 sec, and you set it to shorter like 2000(2sec)
