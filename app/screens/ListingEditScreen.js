@@ -19,7 +19,7 @@ const validationSchema = Yup.object().shape({
   title: Yup.string().min(1).required().label("Title"),
   price: Yup.number().min(1).max(10000).required().label("Price"),
   description: Yup.string().label("Description"),
-  category: Yup.object().required().nullable().label("Category"),
+  category: Yup.object().required().label("Category"),
   images: Yup.array().min(1, "Please at least select one image"),
 });
 
@@ -85,7 +85,7 @@ function ListingEditScreen(props) {
   const [uploadVisible, setUploadVisible] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  const handleSubmit = async (listing) => {
+  const handleSubmit = async (listing, {resetForm}) => {
     setProgress(0);
     setUploadVisible(true);
     const result = await listingsApi.addListing(
@@ -97,6 +97,8 @@ function ListingEditScreen(props) {
       setUploadVisible(false);
       return alert("Could not save the listing.");
     }
+
+    resetForm();
   };
 
   return (
