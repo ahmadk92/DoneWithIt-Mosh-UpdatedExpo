@@ -130,3 +130,9 @@ calling-apis-using-apisauce:
 
 Lottie
     npx expo install lottie-react-native    
+
+Progress Bar
+    https://github.com/oblador/react-native-progress
+    npm install react-native-progress 
+    also install this for depencendy: npx expo install react-native-svg
+    then import * as Progress from 'react-native-progress'
