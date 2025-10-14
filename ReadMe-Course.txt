@@ -136,3 +136,8 @@ Progress Bar
     npm install react-native-progress 
     also install this for depencendy: npx expo install react-native-svg
     then import * as Progress from 'react-native-progress'
+
+Offline Support:
+@react-native-community/netinfo allows you to get information about connection type and connection quality.
+A cross-platform API that provides access to network information.
+    npx expo install @react-native-community/netinfo

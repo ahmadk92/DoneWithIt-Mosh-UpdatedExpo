@@ -1,16 +1,9 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-
-import AuthNavigator from "./app/navigation/AuthNavigator";
-import navigationTheme from "./app/navigation/navigationTheme";
-import AppNavigator from "./app/navigation/AppNavigator";
-import ListingScreen from "./app/screens/ListingScreen";
-
+import NetInfo from '@react-native-community/netinfo'
 
 export default function App() {
-  return (
-    <NavigationContainer theme={navigationTheme}>
-      <AppNavigator />
-    </NavigationContainer>
-  );
+  // NetInfo.fetch().then(net => console.log(net))
+  
+  const unsubscribe = NetInfo.addEventListener(netInfo => console.log(netInfo))
+  return null;
 }
