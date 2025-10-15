@@ -144,3 +144,17 @@ A cross-platform API that provides access to network information.
     npx expo install @react-native-async-storage/async-storage
 
     npm i moment
+
+Recommended modern alternative for caching images chapter
+Expo now ships an official expo-image component that natively supports caching, progressive loading, transitions, and placeholders — everything you needed from react-native-expo-image-cache.
+✅ You can use it directly:
+    npx expo install expo-image
+    import { Image } from "expo-image"; // import Image from here, instead of 'react-navive'
+
+ 🔍 Feature comparison
+Feature	               react-native-expo-image-cache	                        expo-image (modern)
+Cached loading	                 ✅ Yes	                                ✅ Yes (cachePolicy="disk")
+Low-res preview	               ✅ (preview={{uri:...}})	                    ✅ (placeholder={{uri:...}})
+Tint (blur effect overlay)	      ✅ (tint="light")	               ⚙️ No direct prop, but can replicate with blurRadius or overlay style
+Works in Expo Go	                  ✅	                                           ✅
+Maintained / recommended	          ❌	                                       ✅ ✅ ✅

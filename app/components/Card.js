@@ -1,19 +1,21 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  Image,
-  Text,
-  TouchableWithoutFeedback,
-} from "react-native";
+import { View, StyleSheet, Text, TouchableWithoutFeedback } from "react-native";
+import { Image } from "expo-image";
+
 import colors from "../config/colors";
 import AppText from "./AppText";
 
-function Card({ title, subtitle, imageUrl, onPress }) {
+function Card({ title, subtitle, imageUrl, onPress, thumbnailUrl }) {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.card}>
-        <Image style={styles.image} source={{ uri: imageUrl }} />
+        <Image
+          style={styles.image}
+          source={{ uri: imageUrl }}          // no need to change, source is the same as ImageUrl in mosh code
+          placeholder={{ uri: thumbnailUrl }} // same as preview in mosh code
+          transition={500} // same as tint prop in mosh code
+          cachePolicy="disk" // add this to have the cache feature
+        />
         <View style={styles.detailsContainer}>
           <AppText style={styles.title} numberOfLines={1}>
             {title}
