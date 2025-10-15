@@ -141,3 +141,6 @@ Offline Support:
 @react-native-community/netinfo allows you to get information about connection type and connection quality.
 A cross-platform API that provides access to network information.
     npx expo install @react-native-community/netinfo
+    npx expo install @react-native-async-storage/async-storage
+
+    npm i moment
