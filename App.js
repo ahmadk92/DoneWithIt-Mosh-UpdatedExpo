@@ -1,20 +1,16 @@
 import React from "react";
-import NetInfo from "@react-native-community/netinfo";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { NavigationContainer } from "@react-navigation/native";
+
+import AuthNavigator from "./app/navigation/AuthNavigator";
+import navigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
+import ListingScreen from "./app/screens/ListingScreen";
+
 
 export default function App() {
-  const demo = async () => {
-    try {
-      await AsyncStorage.setItem("Person", JSON.stringify({ id: 1 }));
-      const value = await AsyncStorage.getItem('Person');
-      const person = JSON.parse(value);
-      console.log(person)
-
-    } catch (error) {
-      console.log(error)
-    }
-  };
-
-  demo();
-  return null;
+  return (
+    <NavigationContainer theme={navigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }

@@ -35,7 +35,7 @@ const get = async (key) => {
       return null;
     }
 
-    return item;
+    return item.value;
   } catch (error) {
     console.log(error);
   }
@@ -43,4 +43,5 @@ const get = async (key) => {
 
 export default {
   store,
+  get
 };
