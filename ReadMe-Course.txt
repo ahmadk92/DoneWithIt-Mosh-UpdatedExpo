@@ -158,3 +158,6 @@ Low-res preview	               ✅ (preview={{uri:...}})	                    ✅
 Tint (blur effect overlay)	      ✅ (tint="light")	               ⚙️ No direct prop, but can replicate with blurRadius or overlay style
 Works in Expo Go	                  ✅	                                           ✅
 Maintained / recommended	          ❌	                                       ✅ ✅ ✅
+
+Auth section
+    npm i jwt-decode
