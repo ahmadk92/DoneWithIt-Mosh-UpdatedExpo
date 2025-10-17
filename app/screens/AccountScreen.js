@@ -7,7 +7,7 @@ import Icon from "../components/Icon";
 import colors from "../config/colors";
 import ListItemSeparator from "../components/ListItemSeparator";
 import AuthContext from "../auth/context";
-
+import authStorage from "../auth/storage";
 
 const menuItems = [
   {
@@ -17,14 +17,16 @@ const menuItems = [
   {
     title: "My Messages",
     icon: { name: "email", backgroundColor: colors.secondary },
-    targetScreen:"Messages"
+    targetScreen: "Messages",
   },
 ];
 
-function AccountScreen({navigation}) {
-  const {user, setUser} =  useContext(AuthContext);
-  const handleLogout = () => setUser(null)
-
+function AccountScreen({ navigation }) {
+  const { user, setUser } = useContext(AuthContext);
+  const handleLogout = () => {
+    setUser(null);
+    authStorage.removeToken();
+  };
 
   return (
     <Screen style={styles.screen}>
@@ -49,7 +51,7 @@ function AccountScreen({navigation}) {
                   backgroundColor={item.icon.backgroundColor}
                 />
               }
-              onPress={()=>navigation.navigate(item.targetScreen)}
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           )}
         />

@@ -161,3 +161,5 @@ Maintained / recommended	          ‚ùå	                                       ‚ú
 
 Auth section
     npm i jwt-decode
+
+    npx expo install expo-secure-store
