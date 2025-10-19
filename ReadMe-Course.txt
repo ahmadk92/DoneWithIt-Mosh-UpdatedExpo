@@ -180,4 +180,5 @@ You should now use the separate package:
 
     anyway, the SplashScreen take effect after "npx prebuild"
     pass this for current, and we will be back on it at the end of course
-    
+
+althogh in mosh course, he export useAuth as default in one line, It's changed now, you should first declare it as constant and expoart it as default in the buttom of useAuth.js
