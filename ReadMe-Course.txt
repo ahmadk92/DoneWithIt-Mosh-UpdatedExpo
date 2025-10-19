@@ -163,3 +163,21 @@ Auth section
     npm i jwt-decode
 
     npx expo install expo-secure-store
+
+
+import { AppLoading } from "expo" is deprecated.
+❌ It no longer exists in modern Expo SDKs (starting from SDK 41+).
+You should now use the separate package:
+    npm install expo-app-loading
+    and then:
+    import AppLoading from "expo-app-loading";
+
+    So for learning Mosh’s course, ✅ go ahead and use expo-app-loading.
+    But for production or future projects, 🔜 migrate to: import * as SplashScreen from "expo-splash-screen";
+
+    use this:
+    npx expo install expo-splash-screen
+
+    anyway, the SplashScreen take effect after "npx prebuild"
+    pass this for current, and we will be back on it at the end of course
+    
