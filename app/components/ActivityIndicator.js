@@ -11,7 +11,7 @@ function ActivityIndicator({ visible = false }) {
         autoPlay
         loop
         source={require("../assets/animations/mosh_loader.json")}
-        style={{ flex: 1}}
+        style={{ flex: 1 }}
       />
     </View>
   );
@@ -20,6 +20,8 @@ function ActivityIndicator({ visible = false }) {
 const styles = StyleSheet.create({
   overlay: {
     position: "absolute",
+    backgroundColor: "white",
+    opacity: 0.8,
     height: "100%",
     width: "100%",
     zIndex: 1,
