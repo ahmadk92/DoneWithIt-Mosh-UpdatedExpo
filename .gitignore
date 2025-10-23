@@ -1,7 +1,17 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-error.log
+package-lock.json
+yarn.lock
+
 # .vscode
 .vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
 # dependencies
 node_modules/
@@ -11,6 +21,14 @@ node_modules/
 dist/
 web-build/
 expo-env.d.ts
+.expo-shared/
+android/
+ios/
+*.expo-shared
+/*.apk
+/*.aab
+/*.keystore
+build/
 
 # Native
 .kotlin/
@@ -42,3 +60,17 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / sensitive
+.env
+.env.local
+.env.*.local
+config/*.json     # if your config files contain secrets, keep them ignored
+
+# Other potential larges
+*.zip
+*.tgz

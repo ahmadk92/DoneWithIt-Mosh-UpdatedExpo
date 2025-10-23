@@ -182,3 +182,17 @@ You should now use the separate package:
     pass this for current, and we will be back on it at the end of course
 
 althogh in mosh course, he export useAuth as default in one line, It's changed now, you should first declare it as constant and expoart it as default in the buttom of useAuth.js
+
+
+
+Notifications:
+
+Mosh’s course (Notifications) is very outdated — Expo’s Notifications API has completely changed since his recording.
+
+⚠️ Problem:
+    expo-permissions is fully deprecated.
+    Notifications no longer comes from expo — now it’s in expo-notifications.
+    The permissions API for notifications moved into that same package.
+
+the new address of link that mosh shows in lesson: sending notifications on the server
+    https://docs.expo.dev/push-notifications/sending-notifications/
